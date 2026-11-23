@@ -120,7 +120,11 @@ public class TraversalPractice {
      * @return the number of nodes in the tree
      */
     public static int size(TreeNode node) {
-        return -1;
+        if(node == null) return 0;
+        int left = size(node.left);
+        int right = size(node.right);
+        int total = left + right + 1;
+        return total;
     }
 
     /**
@@ -147,9 +151,10 @@ public class TraversalPractice {
      * @return the count of branch nodes in the tree
      */
     public static int branchCount(TreeNode node) {
+        
+
         return -1;
     }
-
 
     /**
      * Returns the maximum value in the tree.
